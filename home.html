@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+  <div class="quiz-container">
+      <h2>Social Public Question 2019 </h2>
+      <h2 id="Que">Question</h2>
+<ul>
+<li>
+    <input type="radio" id="a" name="answer" class="answer">
+    <label for="a" id="a_text" >Options</label>
+</li>
+<li>
+    <input type="radio" id="b" name="answer" class="answer">
+    <label for="b" id="b_text" >Options</label>
+</li>
+<li>
+    <input type="radio" id="c" name="answer" class="answer">
+    <label for="c" id="c_text" >Options</label>
+</li>
+<li>
+    <input type="radio" id="d" name="answer" class="answer">
+    <label for="d" id="d_text" >Options</label>
+</li>
+
+
+</ul>
+<button id="submit" onclick="Submitted()">Submit</button>
+</div>
+
+
+
+         <div id="Option1"onclick="selecTed(this.id, this.innerHTML)"  style="width: 200px" ></div>
+         <div id="Option2" onclick="selecTed(this.id, this.innerHTML)" style="width: 200px"></div>
+         <div id="Option3" onclick="selecTed(this.id, this.innerHTML)" style="width: 200px" ></div>
+   <!--      <input type="button" value="Next" onclick="Nextbtn()">
+        <input type="button" value="Previous" onclick="Prevbtb()"> -->
+        <script src="./index.js" ></script>        
+    </body>
+</html>
