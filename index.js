@@ -132,16 +132,16 @@ function getSelected()
 function endofQuiz() {
     
     /* document.querySelector(".quiz-container").innerHTML = "End of Quiz"  */
-document.querySelector(".quiz-container").innerHTML = "<b>Your Scores are " +score+ " out of 5 "+"</b><br>" ;
-alert("hello");
+document.querySelector(".quiz-container").innerHTML = "<b>Your Scores are " +score+" Out of "+ quizData.length+"</b><br>" ;
+/* alert("hello"); */
 
 
 quizData.forEach((element,index) => {
     
-    console.log("For loop Corect Option :"+element.correct)
+/*     console.log("For loop Corect Option :"+element.correct)
     console.log("For loop type Option :"+typeof(element.correct))
     console.log("For loop User select Option :"+answerarr[index])
-    console.log("For loop type Option :"+typeof(answerarr[index]))
+    console.log("For loop type Option :"+typeof(answerarr[index])) */
 
     if (element.correct === answerarr[index]) {
 
@@ -157,15 +157,15 @@ quizData.forEach((element,index) => {
     
     }
     
-    
+
 
    let res =  answerarr.forEach(item => { return item} )
-   console.log(res)
+/*    console.log(res) */
     
 
 
     /* $(".quiz-container").append(answerarr[0]); */
-    console.log(answerarr)
+  /*   console.log(answerarr) */
     /* $(".quiz-container").append("<ul><li class='summary'>"+element.correct+"</li></ul>"); */
 
     /* $("p").append("Option a  "+ element.a+"<br>");
@@ -173,18 +173,16 @@ quizData.forEach((element,index) => {
     $("p").append("Option c "+ element.c+"<br>");
     $("p").append("Option d "+ element.d+"<br>");
     $("p").append("Correct Option :"+ element.correct+"<br><br>"); */
-    console.log("Question is "+ element.Question)
+   /*  console.log("Question is "+ element.Question)
     console.log("Option a  "+ element.a)
     console.log("Option b "+ element.b)
     console.log("Option c "+ element.c)
     console.log("Option d "+ element.d)
-    console.log("Correct Option"+ element.correct)
+    console.log("Correct Option"+ element.correct) */
  
  });
  
- 
- 
-
+ $(".homebtn").append("<Button onClick='/welcome.html'>Home></Button>")
 }
 
 const answerarr = [];
@@ -193,11 +191,11 @@ function Submitted(){
    
     let answ = getSelected();
         
-        console.log("The answer in the Choices :"+answ)
+       /*  console.log("The answer in the Choices :"+answ) */
         
         answerarr.push(answ);
-        console.log("New Array containing answers"+answerarr)
-
+        /* console.log("New Array containing answers"+answerarr)
+ */
 
 
 /* console.log("Selection Option is "+answ)
@@ -209,7 +207,7 @@ console.log("This shows the correct answer"+quizData[count].correct)
         score=score+1;
         
         
-        console.log("Score is : "+score)
+       /*  console.log("Score is : "+score) */
     }
   
           
@@ -225,7 +223,7 @@ console.log("This shows the correct answer"+quizData[count].correct)
         else{
         /*     endofQuiz(); */
             
-            alert("End of Quiz Your Score is : " +score);
+            /* alert("End of Quiz Your Score is : " +score); */
             endofQuiz();
             
         }
