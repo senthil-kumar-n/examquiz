@@ -54,6 +54,15 @@ function selecTed(clicked_id, clicked_value) {
  */
 
 
+let quizData = [{Question: "A Great Demand for Raw Materials was created by ?",a:"Industrial Revolution",b:"IT Revolution ",c:"French Revolution", d:"Agrary Revolution", correct:"a"},
+{Question: "The British and French forces checked the advances of German forces in the battle of ?",a:"Eastern Front",b:"Dardenellus",c:"Marne", d:"North Sea", correct:"c"},
+{Question: "The founder of fascist party was ?",a:"Hitler",b:"Mussolini",c:"Stalin", d:"Lenin", correct:"b"},
+{Question: "The Seat of International Court of Justice is ? ",a:"The Hague",b:"Berlin",c:"Rome", d:"Tokyo", correct:"a"},
+{Question: "The task of Unifying the Indian States was undertaken by ? ",a:"Dr. B.R Ambedkar",b:"Rajendraprasad",c:"Rajaji ", d:"Sardar Vallabhbai Patel", correct:"d"},
+]
+
+console.log(quizData);
+
 const ScienceQuizData = [{Question: "Virtual Machine is ?",a:"Iaas",b:"Saas",c:"Paas", d:"NaaS", correct:"a"},
 {Question: "HTML is ?",a:"Coding",b:"Tags",c:"Markup", d:"Drawing", correct:"c"},
 {Question: "Azure Sentinel",a:"Monitor",b:"SIEM",c:"Storage", d:"NaaS", correct:"b"},
@@ -67,20 +76,18 @@ function SocialQuiz() {
 
 
 
-const SocialQuizData = [{Question: "A Great Demand for Raw Materials was created by ?",a:"Industrial Revolution",b:"IT Revolution ",c:"French Revolution", d:"Agrary Revolution", correct:"a"},
+/* const SocialQuizData = [{Question: "A Great Demand for Raw Materials was created by ?",a:"Industrial Revolution",b:"IT Revolution ",c:"French Revolution", d:"Agrary Revolution", correct:"a"},
 {Question: "The British and French forces checked the advances of German forces in the battle of ?",a:"Eastern Front",b:"Dardenellus",c:"Marne", d:"North Sea", correct:"c"},
 {Question: "The founder of fascist party was ?",a:"Hitler",b:"Mussolini",c:"Stalin", d:"Lenin", correct:"b"},
 {Question: "The Seat of International Court of Justice is ? ",a:"The Hague",b:"Berlin",c:"Rome", d:"Tokyo", correct:"a"},
 {Question: "The task of Unifying the Indian States was undertaken by ? ",a:"Dr. B.R Ambedkar",b:"Rajendraprasad",c:"Rajaji ", d:"Sardar Vallabhbai Patel", correct:"d"},
 ]
+ */
 
-const quizData = [{Question: "A Great Demand for Raw Materials was created by ?",a:"Industrial Revolution",b:"IT Revolution ",c:"French Revolution", d:"Agrary Revolution", correct:"a"},
-{Question: "The British and French forces checked the advances of German forces in the battle of ?",a:"Eastern Front",b:"Dardenellus",c:"Marne", d:"North Sea", correct:"c"},
-{Question: "The founder of fascist party was ?",a:"Hitler",b:"Mussolini",c:"Stalin", d:"Lenin", correct:"b"},
-{Question: "The Seat of International Court of Justice is ? ",a:"The Hague",b:"Berlin",c:"Rome", d:"Tokyo", correct:"a"},
-{Question: "The task of Unifying the Indian States was undertaken by ? ",a:"Dr. B.R Ambedkar",b:"Rajendraprasad",c:"Rajaji ", d:"Sardar Vallabhbai Patel", correct:"d"},
-]
 
+quizData = ScienceQuizData;
+console.log(ScienceQuizData);
+console.log(quizData);
 
 let count = 0;
 let score = 0;
@@ -131,84 +138,22 @@ function getSelected()
 
 function endofQuiz() {
     
-    /* document.querySelector(".quiz-container").innerHTML = "End of Quiz"  */
-document.querySelector(".quiz-container").innerHTML = "<b>Your Scores are " +score+ " out of 5 "+"</b><br>" ;
-alert("hello");
-
-
-quizData.forEach((element,index) => {
-    
-    console.log("For loop Corect Option :"+element.correct)
-    console.log("For loop type Option :"+typeof(element.correct))
-    console.log("For loop User select Option :"+answerarr[index])
-    console.log("For loop type Option :"+typeof(answerarr[index]))
-
-    if (element.correct === answerarr[index]) {
-
-        $(".quiz-container").append("<br><span class='CorrectOp'>Question: "+ element.Question+"</span><br>" + "a. "+ element.a+"<br>"+"b. "+ element.b+"<br>"+"c. "+ element.c+"<br>"+"d. "+ element.d+"<br>"+"<span class='summary'><b>"+"Correct Answer "
-        +element.correct+"</b></span><br>"+"<span class='CorrectOp'> Your selected option is :"+answerarr[index]+"</span><br>")
-        
-
-    }
-    else{
-
-        $(".quiz-container").append("<br><span class='IncorrectOp'>Question: "+ element.Question+"</span><br>" + "a. "+ element.a+"<br>"+"b. "+ element.b+"<br>"+"c. "+ element.c+"<br>"+"d. "+ element.d+"<br>"+"<span class='summary'><b>"+"Correct Answer "
-    +element.correct+"</b></span><br>"+"<span class='IncorrectOp'>Your selected option is :"+answerarr[index]+"</span><br>")
-    
-    }
-    
-    
-
-   let res =  answerarr.forEach(item => { return item} )
-   console.log(res)
-    
-
-
-    /* $(".quiz-container").append(answerarr[0]); */
-    console.log(answerarr)
-    /* $(".quiz-container").append("<ul><li class='summary'>"+element.correct+"</li></ul>"); */
-
-    /* $("p").append("Option a  "+ element.a+"<br>");
-    $("p").append("Option b "+ element.b+"<br>");
-    $("p").append("Option c "+ element.c+"<br>");
-    $("p").append("Option d "+ element.d+"<br>");
-    $("p").append("Correct Option :"+ element.correct+"<br><br>"); */
-    console.log("Question is "+ element.Question)
-    console.log("Option a  "+ element.a)
-    console.log("Option b "+ element.b)
-    console.log("Option c "+ element.c)
-    console.log("Option d "+ element.d)
-    console.log("Correct Option"+ element.correct)
- 
- });
- 
- 
- 
+    document.querySelector(".quiz-container").innerHTML = "End of Quiz" 
 
 }
 
-const answerarr = [];
 
 function Submitted(){
    
     let answ = getSelected();
-        
-        console.log("The answer in the Choices :"+answ)
-        
-        answerarr.push(answ);
-        console.log("New Array containing answers"+answerarr)
 
-
-
-/* console.log("Selection Option is "+answ)
+console.log("Selection Option is "+answ)
 console.log("Selection Question is "+quizData[count].Question)
 console.log("This shows the correct answer"+quizData[count].correct)
- */   
+   
     if (answ === quizData[count].correct) {
 
         score=score+1;
-        
-        
         console.log("Score is : "+score)
     }
   
@@ -226,8 +171,9 @@ console.log("This shows the correct answer"+quizData[count].correct)
         /*     endofQuiz(); */
             
             alert("End of Quiz Your Score is : " +score);
-            endofQuiz();
-            
+            document.querySelector(".quiz-container").innerHTML = "Your Score is" +score;
+            const para = document.body.createElement(p)
+            appendChild(para)
         }
   
 }
