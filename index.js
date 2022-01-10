@@ -182,7 +182,7 @@ quizData.forEach((element,index) => {
  
  });
  
- $(".homebtn").append("<Button onClick='/welcome.html'>Home></Button>")
+ $(".homebtn").append("<Button onClick='/'>Home</Button>")
 }
 
 const answerarr = [];
