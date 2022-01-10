@@ -1,6 +1,6 @@
 function SocialQuiz() {
 
-    location.href = "/home.html"
+    location.href = "/social.html"
 }
 
 
