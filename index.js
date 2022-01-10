@@ -127,7 +127,12 @@ function getSelected()
     return selanswer; 
 }
 
+function Homepage() {
 
+    location.href = "/"
+
+
+}
 
 function endofQuiz() {
     
@@ -182,7 +187,7 @@ quizData.forEach((element,index) => {
  
  });
  
- $(".homebtn").append("<Button onClick='/'>Home</Button>")
+ $(".homebtn").append("<Button onclick='Homepage()'>Home</Button>")
 }
 
 const answerarr = [];
